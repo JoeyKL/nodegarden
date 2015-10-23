@@ -124,7 +124,7 @@ function render () {
       }
 
       // calculate gravity force
-      force = (10 * nodeA.m * nodeB.m) / Math.pow(distance, 2)
+      force = (10 * nodeA.m * nodeB.m) / Math.log(distance) * -1
 
       if (force > 0.025) {
         // cap force to a maximum value of 0.025
